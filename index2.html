@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <img src="https://anjalidaryani.github.io/Ireland/irland-page1.jpg" alt="Snow" style="width:100%;">
+  <div class="bottom-left"><button onclick="window.location.href = 'page2.html';">Main Attractions</button></div>
+  <div class="top-left"></div>
+  <div class="top-right"></div>
+  <div class="bottom-right"></div>
+  <div class="centered"><font color="white">
+  
+  <br>&nbsp</br>
+	<br>&nbsp</br>
+	<br>&nbsp</br>
+	<br>&nbsp</br>
+	<br>&nbsp</br>
+	
+	 <p>Anjali Daryani</p>
+	 <p>Monica Chandra</p>
+	 <p/>APCSP Millard Period 2</p>
+<div>
+<br> Time left until our Ireland trip: </br>
+</div>
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 13, 2019 11:59:00").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+  // Get todays date and time
+  var now = new Date().getTime();
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  // If the count down is finished, write some text
+  if (distance < 0) {
+     clearInterval(x);
+    document.getElementById("demo").innerHTML = "Jauary 14, 2019 at 11:59:00";
+  }
+}, 1000);
+</script></div>
+</div>
+
+</body>
+</html> 
